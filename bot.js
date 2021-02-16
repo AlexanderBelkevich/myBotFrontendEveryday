@@ -1,21 +1,19 @@
 require('dotenv').config();
 const { Telegraf, Markup, reply_markup } = require('telegraf')
-const api = require('covid19-api');
-const COUNTRIES_LIST = require('./constants');
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
-bot.on('new_chat_members', (ctx) => {
-    ctx.reply(`
-Привет, ${ctx.update.message.new_chat_member.username}!
+// bot.on('new_chat_members', (ctx) => {
+//     ctx.reply(`
+// Привет, ${ctx.update.message.new_chat_member.username}!
 
-Наше маленькое сообщество очень радо тому, что ты с нами!
+// Наше маленькое сообщество очень радо тому, что ты с нами!
 
-Будет круто, если ты немного расскажешь о себе.
-Нам так будет интереснее вести беседу!
+// Будет круто, если ты немного расскажешь о себе.
+// Нам так будет интереснее вести беседу!
 
-А еще ты можешь набрать /start для запуска полезного бота.`)
-})
+// А еще ты можешь набрать /start для запуска полезного бота.`)
+// })
 
 bot.start((ctx) =>
   ctx.telegram.sendMessage(`@${ctx.update.message.from.username}`,
@@ -28,8 +26,6 @@ Markup.keyboard([
 ]).resize()
   )
 );
-
-bot.help((ctx) => ctx.reply(COUNTRIES_LIST));
 
 bot.on('text', (ctx) => {
     if (ctx.update.message.text === 'Все задачи') {
