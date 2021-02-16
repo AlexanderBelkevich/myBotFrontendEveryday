@@ -27,7 +27,9 @@ bot.on('new_chat_members', (ctx) => {
 // bot.help((ctx) => ctx.reply(COUNTRIES_LIST))
 
 bot.on('text', async (ctx) => {
+    console.log(ctx.update.message.text)
     if (ctx.update.message.text === 'Все задачи') {
+        console.log('ну ок же')
         ctx.reply(`
             [Задача №1. Верстка чата](https://www.patreon.com/posts/zadacha-no-1-47152476)
         `, {reply_markup: 'markdown'})
