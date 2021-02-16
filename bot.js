@@ -14,6 +14,7 @@ bot.start((ctx) => ctx.reply(`
 ))
 
 bot.on('new_chat_members', (ctx) => {
+    console.log(ctx)
     ctx.reply(`
 Привет, ${ctx.update.message.from.first_name}!
 
