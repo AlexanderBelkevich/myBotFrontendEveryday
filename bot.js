@@ -1,18 +1,20 @@
 require('dotenv').config()
-const COUNTRIES_LIST = require('./constants')
+// const COUNTRIES_LIST = require('./constants')
 
 const { Telegraf, Markup } = require('telegraf')
-const api = require('covid19-api')
+// const api = require('covid19-api')
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
 bot.start((ctx) => ctx.reply(`
 Привет, ${ctx.update.message.from.first_name}!
-Узнай статистику по Коронавирусу.
-Введи на английском название страны и получи статистику.
-Посмотреть весь список стран можно командой /help.
+
+Наше маленькое сообщество очень радо тому, что ты
+с нами!
+
+С помощью кнопок ниже ты можешь получить интересующий
+тебя контент :)
 `, Markup.keyboard([
-    ['US', 'Russia'],
-    ['Ukraine', 'Kazakhstan']
+    ['Все задачи', 'Все разборы задач'],
 ]).resize()
 ))
 
