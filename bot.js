@@ -30,9 +30,9 @@ bot.start((ctx) => {
 )
 })
 
-bot.on('message', async (ctx) => {
-    console.log(ctx.update.message)
-    console.log(ctx.update.message.text.toLowerCase().replaceAll(" ", ""))
+bot.on('text', async (ctx) => {
+    console.log(ctx.message)
+    console.log(ctx.message.text.toLowerCase().replaceAll(" ", ""))
     if (ctx.update.message.text.toLowerCase() === 'Саня,покажизадачи') {
         ctx.telegram.sendMessage(ctx.update.message.from.id,`
 <a href="https://www.patreon.com/posts/zadacha-no-1-47152476"><b>Задача №1</b>. Верстка чата</a>
