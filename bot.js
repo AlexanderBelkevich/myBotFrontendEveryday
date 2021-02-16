@@ -31,7 +31,8 @@ bot.on('text', async (ctx) => {
     if (ctx.update.message.text === 'Все задачи') {
         console.log('ну ок же')
         ctx.reply(`
-            [Задача №1 Верстка чата]
+            [Задача №1 - Верстка чата](https://www.patreon.com/posts/zadacha-no-1-47152476)
+            [Задача №2 - Калькулятор стоимости доставки](https://www.patreon.com/posts/zadacha-no-2-47571187)
         `, {parse_mode: 'MarkdownV2'})
     }
 })
