@@ -27,6 +27,8 @@ bot.start((ctx) => ctx.reply(
 ));
 
 bot.on('text', (ctx) => {
+    console.log(ctx)
+    console.log(ctx.message)
     if (ctx.update.message.text === 'Все задачи') {
         ctx.telegram.sendMessage(ctx.update.message.from.id,`
 <a href="https://www.patreon.com/posts/zadacha-no-1-47152476"><b>Задача №1</b>. Верстка чата</a>
