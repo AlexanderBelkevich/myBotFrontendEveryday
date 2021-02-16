@@ -31,20 +31,22 @@ bot.hears('sss', (ctx) => {
     ctx.reply('Hey there')
 })
 
-bot.on('text', async (ctx) => {
-    console.log(ctx)
-    console.log(ctx.message)
-    if (ctx.update.message.text === 'Все задачи') {
-        ctx.telegram.sendMessage(ctx.update.message.from.id,`
-<a href="https://www.patreon.com/posts/zadacha-no-1-47152476"><b>Задача №1</b>. Верстка чата</a>
-<a href="https://www.patreon.com/posts/zadacha-no-2-47571187"><b>Задача №2</b>. Калькулятор стоимости доставки (до 22.02.2021)</a>
-        `, {parse_mode: 'HTML'})
-    }
-    if (ctx.update.message.text === 'Все разборы задач') {
-        ctx.telegram.sendMessage(ctx.update.message.from.id,`
-<a href="https://youtu.be/aNM02KvjLu0"><b>Разбор задачи №1</b> от 14.02.2021</a>
-        `, {parse_mode: 'HTML', disable_web_page_preview: true})
-    }
-})
+bot.hears('hi', (ctx) => ctx.reply('Hey there'))
+
+// bot.on('text', async (ctx) => {
+//     console.log(ctx)
+//     console.log(ctx.message)
+//     if (ctx.update.message.text === 'Все задачи') {
+//         ctx.telegram.sendMessage(ctx.update.message.from.id,`
+// <a href="https://www.patreon.com/posts/zadacha-no-1-47152476"><b>Задача №1</b>. Верстка чата</a>
+// <a href="https://www.patreon.com/posts/zadacha-no-2-47571187"><b>Задача №2</b>. Калькулятор стоимости доставки (до 22.02.2021)</a>
+//         `, {parse_mode: 'HTML'})
+//     }
+//     if (ctx.update.message.text === 'Все разборы задач') {
+//         ctx.telegram.sendMessage(ctx.update.message.from.id,`
+// <a href="https://youtu.be/aNM02KvjLu0"><b>Разбор задачи №1</b> от 14.02.2021</a>
+//         `, {parse_mode: 'HTML', disable_web_page_preview: true})
+//     }
+// })
 bot.launch();
 console.log('Бот запущен');
