@@ -32,7 +32,7 @@ bot.on('text', async (ctx) => {
         console.log('ну ок же')
         ctx.reply(`
 <a href="https://www.patreon.com/posts/zadacha-no-1-47152476"><b>Задача №1</b>. Верстка чата</a>
-<a href="https://www.patreon.com/posts/zadacha-no-2-47571187"><b>Задача №2</b>. Калькулятор стоимости доставки</a>
+<a href="https://www.patreon.com/posts/zadacha-no-2-47571187"><b>Задача №2</b>. Калькулятор стоимости доставки (до 22.02.2021)</a>
         `, {parse_mode: 'HTML'})
     }
     if (ctx.update.message.text === 'Все разборы задач') {
