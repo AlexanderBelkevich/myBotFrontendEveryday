@@ -32,7 +32,7 @@ bot.on('text', async (ctx) => {
         console.log('ну ок же')
         ctx.reply(`
             [Задача №1. Верстка чата](https://www.patreon.com/posts/zadacha-no-1-47152476)
-        `, {reply_markup: 'markdown'})
+        `, {parse_mode: 'MarkdownV2'})
     }
 })
 
