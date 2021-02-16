@@ -15,10 +15,7 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 // А еще ты можешь набрать /start для запуска полезного бота.`)
 // })
 
-bot.start((ctx) => {
-    
-    // console.log(ctx)
-  ctx.telegram.reply(
+bot.start((ctx) => ctx.telegram.reply(
     `
 С помощью кнопок ниже ты можешь получить интересующий тебя контент.
 Не стесняйся по ним жмякать :)
@@ -27,7 +24,7 @@ bot.start((ctx) => {
 //     ['Все задачи', 'Все разборы задач'],
 // ]).resize()
 //   )
-);
+));
 
 bot.on('text', (ctx) => {
     if (ctx.update.message.text === 'Все задачи') {
