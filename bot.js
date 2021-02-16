@@ -4,8 +4,6 @@ const { Telegraf, Markup } = require('telegraf')
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
 bot.start((ctx) => ctx.reply(`
-
-
 С помощью кнопок ниже ты можешь получить интересующий
 тебя контент :)
 `, Markup.keyboard([
@@ -18,8 +16,7 @@ bot.on('new_chat_members', (ctx) => {
     ctx.reply(`
 Привет, ${ctx.update.message.new_chat_member.username}!
 
-Наше маленькое сообщество очень радо тому, что ты
-с нами!
+Наше маленькое сообщество очень радо тому, что ты с нами!
 
 Будет круто, если ты немного расскажешь о себе :)
 Нам так будет интереснее вести беседу ;)
@@ -29,21 +26,9 @@ bot.on('new_chat_members', (ctx) => {
 
 // bot.help((ctx) => ctx.reply(COUNTRIES_LIST))
 
-// bot.on('text', async (ctx) => {
-//     try {
-//         let data = await api.getReportsByCountries(ctx.message.text)
-//         const formatData = `
-//             Страна: ${data[0][0].country}
-//             Случаи: ${data[0][0].cases}
-//             Смертей: ${data[0][0].deaths}
-//             Вылечились: ${data[0][0].recovered}
-//         `
-//         ctx.reply(formatData)
-//     } catch {
-//         ctx.reply('Ошибка, такой страны не существует')
-//     }
-    
-// })
+bot.on('text', async (ctx) => {
+    console.log(ctx.update.message)
+})
 
 bot.launch()
 console.log('запущено')
