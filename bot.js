@@ -16,6 +16,7 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 // })
 
 bot.start((ctx) =>
+console.log(ctx)
   ctx.telegram.sendMessage(`@${ctx.update.message.from.username}`,
     `
 С помощью кнопок ниже ты можешь получить интересующий тебя контент.
