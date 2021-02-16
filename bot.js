@@ -17,14 +17,14 @@ bot.on('new_chat_members', (ctx) => {
 А еще ты можешь набрать /start для запуска полезного бота.`)
 })
 
-bot.start((ctx) => ctx.sendMessage(ctx.update.message.from.id, `
+bot.start((ctx) => {ctx.sendMessage(ctx.update.message.from.id, `
 С помощью кнопок ниже ты можешь получить интересующий тебя контент.
 
 Ответ от бота придет в личные сообщения.
 `, Markup.keyboard([
     ['Все задачи', 'Все разборы задач'],
 ]).resize()
-))
+)})
 
 bot.on('text', async (ctx) => {
     console.log(ctx.update.message)
