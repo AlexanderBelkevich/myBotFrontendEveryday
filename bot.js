@@ -35,7 +35,7 @@ bot.on('text', async (ctx) => {
     if (ctx.update.message.text === 'Все разборы задач') {
         ctx.reply(`
 <a href="https://youtu.be/aNM02KvjLu0"><b>Разбор задачи №1</b> от 14.02.2021</a>
-        `, {parse_mode: 'HTML', disable_web_page_preview: false})
+        `, {parse_mode: 'HTML'}, {disable_web_page_preview: false})
     }
 })
 
