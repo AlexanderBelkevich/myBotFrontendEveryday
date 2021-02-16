@@ -27,7 +27,7 @@ bot.on('new_chat_members', (ctx) => {
 bot.on('text', async (ctx) => {
     console.log(ctx.update.message.text)
     if (ctx.update.message.text === 'Все задачи') {
-        ctx.sendMessage(`
+        ctx.sendMessage(ctx.message.chat.id,`
 <a href="https://www.patreon.com/posts/zadacha-no-1-47152476"><b>Задача №1</b>. Верстка чата</a>
 <a href="https://www.patreon.com/posts/zadacha-no-2-47571187"><b>Задача №2</b>. Калькулятор стоимости доставки (до 22.02.2021)</a>
         `, {parse_mode: 'HTML'})
