@@ -27,7 +27,7 @@ bot.start((ctx) => {
 //     ['Все задачи', 'Все разборы задач'],
 // ]).resize()
 //   )
-});
+);
 
 bot.on('text', (ctx) => {
     if (ctx.update.message.text === 'Все задачи') {
