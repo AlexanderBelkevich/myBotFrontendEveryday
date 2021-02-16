@@ -17,20 +17,21 @@ bot.on('new_chat_members', (ctx) => {
 })
 
 bot.start((ctx) => {
-    console.log(ctx)
     ctx.reply(`
-С помощью кнопок ниже ты можешь получить интересующий тебя контент.
+Напиши "Саня, покажи задачи" для получения списка задач или "Саня, давай разборы" для получения списка разборов на Youtube.
 
 Ответ от бота придет в личные сообщения.
-`, Markup.keyboard([
-    ['Все задачи', 'Все разборы задач'],
-]).resize()
+`
+// Markup.keyboard([
+//     ['Все задачи', 'Все разборы задач'],
+// ]).resize()
 )
 })
 
 bot.on('text', async (ctx) => {
     console.log(ctx.update.message)
-    if (ctx.update.message.text === 'Все задачи') {
+    console.log(ctx.update.message.text.toLowerCase().replaceAll(" ", ""))
+    if (ctx.update.message.text.toLowerCase() === 'Саня,покажизадачи') {
         ctx.telegram.sendMessage(ctx.update.message.from.id,`
 <a href="https://www.patreon.com/posts/zadacha-no-1-47152476"><b>Задача №1</b>. Верстка чата</a>
 <a href="https://www.patreon.com/posts/zadacha-no-2-47571187"><b>Задача №2</b>. Калькулятор стоимости доставки (до 22.02.2021)</a>
