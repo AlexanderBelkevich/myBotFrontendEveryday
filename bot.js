@@ -18,7 +18,7 @@ bot.on('new_chat_members', (ctx) => {
 })
 
 bot.start((ctx) =>
-  ctx.telegram.sendMessage(ctx.update.message.from.id,
+  ctx.telegram.sendMessage(`@${ctx.update.message.from.username}`,
     `
 С помощью кнопок ниже ты можешь получить интересующий тебя контент.
 Не стесняйся по ним жмякать :)
