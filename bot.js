@@ -25,7 +25,7 @@ bot.on('new_chat_members', (ctx) => {
 })
 
 bot.on('text', async (ctx) => {
-    console.log(ctx.update.message.text)
+    console.log(ctx.update.message)
     if (ctx.update.message.text === 'Все задачи') {
         ctx.telegram.sendMessage(ctx.message.chat.id,`
 <a href="https://www.patreon.com/posts/zadacha-no-1-47152476"><b>Задача №1</b>. Верстка чата</a>
@@ -33,7 +33,7 @@ bot.on('text', async (ctx) => {
         `, {parse_mode: 'HTML'})
     }
     if (ctx.update.message.text === 'Все разборы задач') {
-        ctx.telegram.sendMessage(`
+        ctx.telegram.sendMessage(ctx.message.chat.id,`
 <a href="https://youtu.be/aNM02KvjLu0"><b>Разбор задачи №1</b> от 14.02.2021</a>
         `, {parse_mode: 'HTML', disable_web_page_preview: true})
     }
