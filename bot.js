@@ -26,7 +26,14 @@ bot.start((ctx) => ctx.reply(
 //   )
 ));
 
-bot.on('text', (ctx) => {
+bot.hears('sss', (ctx) => {
+    ctx.telegram.sendMessage(ctx.update.message.from.id,`
+<a href="https://www.patreon.com/posts/zadacha-no-1-47152476"><b>Задача №1</b>. Верстка чата</a>
+<a href="https://www.patreon.com/posts/zadacha-no-2-47571187"><b>Задача №2</b>. Калькулятор стоимости доставки (до 22.02.2021)</a>
+        `, {parse_mode: 'HTML'})
+})
+
+bot.on('text', async (ctx) => {
     console.log(ctx)
     console.log(ctx.message)
     if (ctx.update.message.text === 'Все задачи') {
