@@ -26,10 +26,10 @@ bot.start((ctx) => ctx.reply(
 //   )
 ));
 
-bot.hears('sss', (ctx) => {
-    console.log(ctx)
-    ctx.reply('Hey there')
-})
+// bot.hears('sss', (ctx) => {
+//     console.log(ctx)
+//     ctx.reply('Hey there')
+// })
 
 bot.hears('hi', (ctx) => ctx.reply('Hey there'))
 
