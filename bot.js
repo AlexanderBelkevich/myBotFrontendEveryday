@@ -15,7 +15,7 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 // А еще ты можешь набрать /start для запуска полезного бота.`)
 // })
 
-bot.start((ctx) => ctx.telegram.reply(
+bot.start((ctx) => ctx.reply(
     `
 С помощью кнопок ниже ты можешь получить интересующий тебя контент.
 Не стесняйся по ним жмякать :)
