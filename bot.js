@@ -3,14 +3,6 @@ require('dotenv').config()
 const { Telegraf, Markup, reply_markup } = require('telegraf')
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
-bot.start((ctx) => ctx.reply(`
-С помощью кнопок ниже ты можешь получить интересующий тебя контент.
-
-Ответ от бота придет в личные сообщения.
-`, Markup.keyboard([
-    ['Все задачи', 'Все разборы задач'],
-]).resize()
-))
 
 bot.on('new_chat_members', (ctx) => {
     console.log(ctx.update.message.new_chat_member)
@@ -24,6 +16,15 @@ bot.on('new_chat_members', (ctx) => {
 
 А еще ты можешь набрать /start для запуска полезного бота.`)
 })
+
+bot.start((ctx) => ctx.sendMessage(ctx.update.message.from.id, `
+С помощью кнопок ниже ты можешь получить интересующий тебя контент.
+
+Ответ от бота придет в личные сообщения.
+`, Markup.keyboard([
+    ['Все задачи', 'Все разборы задач'],
+]).resize()
+))
 
 bot.on('text', async (ctx) => {
     console.log(ctx.update.message)
