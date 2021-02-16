@@ -17,16 +17,16 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 
 bot.start((ctx) => {
     
-    console.log(ctx)
-  ctx.telegram.sendMessage(`@${ctx.update.message.from.username}`,
+    // console.log(ctx)
+  ctx.telegram.reply(
     `
 С помощью кнопок ниже ты можешь получить интересующий тебя контент.
 Не стесняйся по ним жмякать :)
-`,
-Markup.keyboard([
-    ['Все задачи', 'Все разборы задач'],
-]).resize()
-  )
+`
+// Markup.keyboard([
+//     ['Все задачи', 'Все разборы задач'],
+// ]).resize()
+//   )
 });
 
 bot.on('text', (ctx) => {
