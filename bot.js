@@ -18,7 +18,9 @@ bot.on('new_chat_members', (ctx) => {
 
 bot.start((ctx) => {
     ctx.reply(`
-Напиши "Саня, покажи задачи" для получения списка задач или "Саня, давай разборы" для получения списка разборов на Youtube.
+Напиши:
+"Саня, покажи задачи" для получения списка задач.
+"Саня, давай разборы" для получения списка разборов на Youtube.
 
 Ответ от бота придет в личные сообщения.
 `
@@ -28,7 +30,7 @@ bot.start((ctx) => {
 )
 })
 
-bot.on('text', async (ctx) => {
+bot.on('message', async (ctx) => {
     console.log(ctx.update.message)
     console.log(ctx.update.message.text.toLowerCase().replaceAll(" ", ""))
     if (ctx.update.message.text.toLowerCase() === 'Саня,покажизадачи') {
