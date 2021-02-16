@@ -31,7 +31,7 @@ bot.on('text', async (ctx) => {
     if (ctx.update.message.text === 'Все задачи') {
         console.log('ну ок же')
         ctx.reply(`
-            [Задача №1\. Верстка чата]
+            [Задача №1\.\ Верстка чата]
         `, {parse_mode: 'MarkdownV2'})
     }
 })
