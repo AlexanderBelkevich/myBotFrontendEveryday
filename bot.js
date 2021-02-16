@@ -31,8 +31,14 @@ bot.on('text', async (ctx) => {
     if (ctx.update.message.text === 'Все задачи') {
         console.log('ну ок же')
         ctx.reply(`
-            <a href="https://www.patreon.com/posts/zadacha-no-1-47152476"><b>Задача №1</b>. Верстка чата</a>
-            <a href="https://www.patreon.com/posts/zadacha-no-2-47571187"><b>Задача №2</b>. Калькулятор стоимости доставки</a>
+<a href="https://www.patreon.com/posts/zadacha-no-1-47152476"><b>Задача №1</b>. Верстка чата</a>
+<a href="https://www.patreon.com/posts/zadacha-no-2-47571187"><b>Задача №2</b>. Калькулятор стоимости доставки</a>
+        `, {parse_mode: 'HTML'})
+    }
+    if (ctx.update.message.text === 'Все разборы задач') {
+        console.log('ну ок же')
+        ctx.reply(`
+<a href="https://youtu.be/aNM02KvjLu0"><b>Разбор задачи №1</b> от 14.02.2021</a>
         `, {parse_mode: 'HTML'})
     }
 })
