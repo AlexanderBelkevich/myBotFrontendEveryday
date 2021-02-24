@@ -32,6 +32,7 @@ bot.on('text', async (ctx) => {
         ctx.telegram.sendMessage(ctx.update.message.from.id,`
 <a href="https://www.patreon.com/posts/zadacha-no-1-47152476"><b>Задача №1</b>. Верстка чата</a>
 <a href="https://www.patreon.com/posts/zadacha-no-2-47571187"><b>Задача №2</b>. Калькулятор стоимости доставки (до 22.02.2021)</a>
+<a href="https://www.patreon.com/posts/zadacha-no-3-47942592"><b>Задача №3</b>. Административная панель (до 6.03.2021)</a>
         `, {parse_mode: 'HTML'})
     }
     if (ctx.update.message.text === 'Все разборы задач') {
