@@ -38,6 +38,7 @@ bot.on('text', async (ctx) => {
     if (ctx.update.message.text === 'Все разборы задач') {
         ctx.telegram.sendMessage(ctx.update.message.from.id,`
 <a href="https://youtu.be/aNM02KvjLu0"><b>Разбор задачи №1</b> от 14.02.2021</a>
+<a href="https://youtu.be/jf7jTFiWo_c"><b>Разбор задачи №2</b> от 24.02.2021</a>
         `, {parse_mode: 'HTML', disable_web_page_preview: true})
     }
 })
