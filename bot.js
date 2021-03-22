@@ -35,6 +35,7 @@ bot.on('text', async (ctx) => {
 <a href="https://www.patreon.com/posts/zadacha-no-3-47942592"><b>Задача №3</b>. Административная панель (до 6.03.2021)</a>
 <a href="https://www.patreon.com/posts/zadacha-no-4-s-48528041"><b>Задача №4</b>. Работа с Google Maps (до 18.03.2021)</a>
 <a href="https://www.patreon.com/posts/zadacha-5-page-48654184"><b>Задача №5</b>. Верстка Landing Page (до 22.03.2021)</a>
+<a href="https://www.patreon.com/posts/zadacha-no-6-49058357"><b>Задача №6</b>. Pomodoro-таймер (до 01.04.2021)</a>
         `, {parse_mode: 'HTML'})
     }
     if (ctx.update.message.text === 'Все разборы задач') {
@@ -42,6 +43,7 @@ bot.on('text', async (ctx) => {
 <a href="https://youtu.be/aNM02KvjLu0"><b>Разбор задачи №1</b> от 14.02.2021</a>
 <a href="https://youtu.be/jf7jTFiWo_c"><b>Разбор задачи №2</b> от 24.02.2021</a>
 <a href="https://www.youtube.com/watch?v=onTPRUmWF64"><b>Разбор задачи №3</b> от 11.03.2021</a>
+<a href="https://www.youtube.com/watch?v=g83UDIOmXpY"><b>Разбор задачи №4</b> от 19.03.2021</a>
         `, {parse_mode: 'HTML', disable_web_page_preview: true})
     }
 })
