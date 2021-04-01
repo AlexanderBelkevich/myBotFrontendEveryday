@@ -36,6 +36,7 @@ bot.on('text', async (ctx) => {
 <a href="https://www.patreon.com/posts/zadacha-no-4-s-48528041"><b>Задача №4</b>. Работа с Google Maps (до 18.03.2021)</a>
 <a href="https://www.patreon.com/posts/zadacha-5-page-48654184"><b>Задача №5</b>. Верстка Landing Page (до 22.03.2021)</a>
 <a href="https://www.patreon.com/posts/zadacha-no-6-49058357"><b>Задача №6</b>. Pomodoro-таймер (до 01.04.2021)</a>
+<a href="https://www.patreon.com/posts/zadacha-no-7-49481281"><b>Задача №7</b>. Задача №7. Landing Page Typemaster (до 06.04.2021)</a>
         `, {parse_mode: 'HTML'})
     }
     if (ctx.update.message.text === 'Все разборы задач') {
