@@ -51,6 +51,7 @@ bot.on('text', async (ctx) => {
 <a href="https://www.youtube.com/watch?v=VWfDwe3scjc"><b>Разбор задачи №5</b> от 26.03.2021</a>
 <a href="https://www.youtube.com/watch?v=ISuffqqpq4s"><b>Разбор задачи №6</b> от 6.04.2021</a>
 <a href="https://www.youtube.com/watch?v=F7tdY4JU1lQ"><b>Разбор задачи №7</b> от 7.04.2021</a>
+<a href="https://youtu.be/E9n-vFwsGJc"><b>Разбор задачи №8</b> от 21.04.2021</a>
 <a href="https://www.youtube.com/watch?v=z347ls11ifw"><b>Разбор задачи №9</b> от 19.04.2021</a>
         `, {parse_mode: 'HTML', disable_web_page_preview: true})
     }
