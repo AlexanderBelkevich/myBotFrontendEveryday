@@ -43,6 +43,7 @@ bot.on('text', async (ctx) => {
 <a href="https://www.patreon.com/posts/zadacha-no-11-50290785"><b>Задача №11</b>. Камень, ножницы, бумага (до 30.04.2021)</a>
 <a href="https://www.patreon.com/posts/50839578"><b>Задача №12</b>. Верстка сайта по поиску офиса (до 16.05.2021)</a>
 <a href="https://www.patreon.com/posts/51431983"><b>Задача №13</b>. Прогноз погоды (до 30.05.2021)</a>
+<a href="https://www.patreon.com/posts/51431983"><b>Задача №14</b>. Страница "Coming Soon" (до 02.06.2021)</a>
         `, {parse_mode: 'HTML'})
     }
     if (ctx.update.message.text === 'Все разборы задач') {
