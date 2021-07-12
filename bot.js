@@ -46,6 +46,7 @@ bot.on('text', async (ctx) => {
 <a href="https://www.patreon.com/posts/51431983"><b>Задача №14</b>. Страница "Coming Soon" (до 11.06.2021)</a>
 <a href="https://www.patreon.com/posts/52568747"><b>Задача №15</b>. Налоговый вычет (до 25.06.2021)</a>
 <a href="https://www.patreon.com/posts/53127898"><b>Задача №16</b>. Верстка вкусного макета (до 08.07.2021)</a>
+<a href="https://www.patreon.com/posts/53591399"><b>Задача №17</b>. Фильтрация компаний (до 26.07.2021)</a>
         `, {parse_mode: 'HTML'})
     }
     if (ctx.update.message.text === 'Все разборы задач') {
@@ -65,6 +66,7 @@ bot.on('text', async (ctx) => {
 <a href="https://youtu.be/UIxrMyGe4jI"><b>Разбор задачи №13</b> от 02.06.2021</a>
 <a href="https://youtu.be/5pBEN6C5pdE"><b>Разбор задачи №14</b> от 17.06.2021</a>
 <a href="https://youtu.be/75zk7XGdqQM"><b>Разбор задачи №15</b> от 30.06.2021</a>
+<a href="https://youtu.be/0c1MxTErSmw"><b>Разбор задачи №16</b> от 12.07.2021</a>
         `, {parse_mode: 'HTML', disable_web_page_preview: true})
     }
 })
